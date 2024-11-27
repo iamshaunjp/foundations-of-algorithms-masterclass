@@ -1,34 +1,21 @@
-// Example 1
+// Given an array of numbers, return the sum of all even numbers within it
 
-function findFirstShortestWord(wordsArray) {
+function sumEvenNumbers(nums) {
+  if (nums.length === 0) return 0 // edge case
 
-  let shortest = wordsArray[0]
+  let sum = 0 // keep track of the sum of even numbers
 
-  for (let word of wordsArray) {
-    if (word.length < shortestWord.length) {
-      shortest = word
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      sum += nums[i]
     }
   }
 
-  // return the shortest word
-  return shortest
+  return sum
 }
 
+// loop through the nums array
+  // check if the number is even
+    // add the number to the total sum
 
-// Example 2
-
-function fib(n) {
-  if (n < 1) return 0
-  if (n === 1) return 1
-
-  let prev = 1
-  let current = 1
-
-  for (let i = 3; i <= n; i++) {
-    let next = current + prev
-    prev = current
-    current = next
-  }
-
-  return current
-}
+// return the sum
