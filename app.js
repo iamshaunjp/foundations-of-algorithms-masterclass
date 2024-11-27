@@ -1,40 +1,15 @@
-// O(1)
-function getFirstElement(arr) {
-  let first = arr[0]
+function middleValues(arr) {
+  let midVals = []
+  let end = arr.length - 1
 
-  return first
-}
+  while (end > 0) {
+    let mid = Math.floor(end / 2)
 
-// O(n)
-function printAllElementsTwice(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i])
-  }
-  for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i])
-  }
-}
-
-// O(n)
-function printFirstHalf(arr) {
-  for (let i = 0; i < arr.length / 2; i++) {
-    console.log(arr[i])
-  }
-}
-
-// O(n^2)
-function countInversions(arr) {
-  let count = 0
-
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] > arr[j]) {
-        count++
-      }
-    }
+    midVals.push(arr[mid])
+    end = mid
   }
 
-  return count
+  return midVals
 }
 
-// [3,1,2,1] --> (3,1), (3,2), (2,1) = 3
+// Example input --> [1, 2, 3, 4, 5, 6, 7, 8]
