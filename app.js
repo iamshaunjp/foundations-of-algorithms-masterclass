@@ -1,5 +1,3 @@
-// Given an array of numbers, return the sum of all even numbers within it
-
 function sumEvenNumbers(nums) {
   if (nums.length === 0) return 0 // edge case
 
@@ -13,9 +11,3 @@ function sumEvenNumbers(nums) {
 
   return sum
 }
-
-// loop through the nums array
-  // check if the number is even
-    // add the number to the total sum
-
-// return the sum
