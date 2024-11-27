@@ -9,7 +9,7 @@ function countdown(num) {
 }
 
 
-
+// warning - infinite recursion
 function infiniteRecursion() {
   infiniteRecursion()
 }
