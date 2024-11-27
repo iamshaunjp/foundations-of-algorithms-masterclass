@@ -1,19 +1,10 @@
-// given a mixed array of positive and negative integers, return the total number of only positive integers
+function countStaircaseWays(n) {
+  /*
 
-function countPositiveNumbers(arr) {
-  let count = 0
+  BASE CASES:
+  - if there's only 1 step, there is exactly 1 way to reach it (1)
+  - if there's 2 steps, there's exactly 2 ways to reach it (1 + 1) and (2)
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      count++
-    }
-  }
 
-  return count
+  */
 }
-
-// create variable to count pos numbers
-
-// loop through array and look at each number
-  // check if number is > 0
-    // if so, add 1 to the count
