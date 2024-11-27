@@ -1,12 +1,15 @@
-// version 1 - loop
-function sumToNLoop(n) {
-  let total = 0
+function printAllPairs(arr) {
 
-  for (let i = 1; i <= n; i++) {
-      total += i
+  for (let i = 0; i < arr.length; i++) {
+
+    for (let j = 0; j < arr.length; j++) {
+      console.log(arr[i], arr[j])
+    }
+
   }
-  
-  return total
+
 }
 
-// Time Complexity - O(n)
+// Time Complexity - O(n^2)
+
+// Example - [3,7,2,9]
