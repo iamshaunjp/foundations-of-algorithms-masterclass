@@ -1,15 +1,18 @@
-function countdown(num) {
-  if (num <= 0) { // this is the base case
-    console.log('done!')
-    return // no more recursions
-  }
+function countStaircaseWays(n) {
+  // bases cases
+  if (n === 1) return 1
+  if (n === 2) return 2
 
-  console.log(num)
-  countdown(num - 1)
+  // recursiv calls for (n - 1) and (n - 2)
+  return countStaircaseWays(n - 1) + countStaircaseWays(n - 2)
 }
 
 
-// warning - infinite recursion
-function infiniteRecursion() {
-  infiniteRecursion()
-}
+/* 
+
+Example --> n = 5
+  --> return count(4) + count(3)
+    --> return count(3) + count(2)->2 + count(2)->2 + count(1)->1
+      --> return count(2)->2 + count(1)->1
+
+*/
