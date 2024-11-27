@@ -1,15 +1,8 @@
-function middleValues(arr) {
-  let midVals = []
-  let end = arr.length - 1
+// given a mixed array of positive and negative integers, return the total number of only positive integers
 
-  while (end > 0) {
-    let mid = Math.floor(end / 2)
+function countPositiveNumbers(arr) {
 
-    midVals.push(arr[mid])
-    end = mid
-  }
 
-  return midVals
+
 }
-
-// Example input --> [1, 2, 3, 4, 5, 6, 7, 8]
+ 
