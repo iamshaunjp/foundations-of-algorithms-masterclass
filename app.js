@@ -1,11 +1,11 @@
-// Challenge A
+// O(1)
 function getFirstElement(arr) {
   let first = arr[0]
 
   return first
 }
 
-// Challenge B
+// O(n)
 function printAllElementsTwice(arr) {
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i])
@@ -15,14 +15,14 @@ function printAllElementsTwice(arr) {
   }
 }
 
-// Challenge C
+// O(n)
 function printFirstHalf(arr) {
   for (let i = 0; i < arr.length / 2; i++) {
     console.log(arr[i])
   }
 }
 
-// Challenge D
+// O(n^2)
 function countInversions(arr) {
   let count = 0
 
@@ -36,3 +36,5 @@ function countInversions(arr) {
 
   return count
 }
+
+// [3,1,2,1] --> (3,1), (3,2), (2,1) = 3
