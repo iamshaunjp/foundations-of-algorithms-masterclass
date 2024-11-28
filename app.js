@@ -1,3 +1,5 @@
+// CHALLENGE - turn this iterative algorithm into a recursive algorithm
+
 function binarySearch(arr, value) {
   let left = 0
   let right = arr.length - 1
@@ -18,5 +20,3 @@ function binarySearch(arr, value) {
   return -1
 }
 
-// Example input: [1,2,4,5,6,7,9,10,11,12]
-//  --> length = 12, target = 4
