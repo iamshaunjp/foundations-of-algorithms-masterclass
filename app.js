@@ -1,20 +1,13 @@
-function binarySearch(arr, value, left = 0, right = arr.length - 1) {
-  // case for value not in the array
-  if (left > right) {
-    return -1
+function bubbleSort(arr) {
+  for (i = arr.length - 1; i > 0; i--) {
+
+    for (j = 0; j < i; j++) {
+      if (arr[j] > arr[j+1]) {
+        [arr[j], arr[j+1]] = [arr[j+1], arr[j]] 
+      }
+    }
+    
   }
 
-  let middle = Math.floor((right + left) / 2)
-
-  if (arr[middle] === value) {
-    return middle
-  }
-
-  if (arr[middle] < value) {
-    return binarySearch(arr, value, middle + 1, right)
-  }
-
-  if (arr[middle] > value) {
-    return binarySearch(arr, value, left, middle - 1)
-  }
+  return arr
 }
