@@ -1,3 +1,5 @@
+// Challenge: Optimize the Bubble Sort 
+
 function bubbleSort(arr) {
   for (i = arr.length - 1; i > 0; i--) {
 
@@ -6,7 +8,7 @@ function bubbleSort(arr) {
         [arr[j], arr[j+1]] = [arr[j+1], arr[j]] 
       }
     }
-    
+
   }
 
   return arr
