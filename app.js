@@ -1,23 +1,11 @@
-// Challenge: Optimize the Bubble Sort 
+function selectionSort(arr) {
+  // loop over the whole array n times, starting at 0
+    // treat i as the index of the starting "min" value for each pass
 
-function bubbleSort(arr) {
-  for (i = arr.length - 1; i > 0; i--) {
-    console.log('new pass')
-    let swap = false
+    // loop the remaining unsorted array (from i to n) for each pass
+      // find the index of the smallest value in the remaining portion
+    
+    // swap that value with the value at the "min" position
 
-    for (j = 0; j < i; j++) {
-      if (arr[j] > arr[j+1]) {
-        [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
-        swap = true 
-      }
-    }
-
-    console.log('array after pass:', arr)
-    if (!swap) {
-      console.log('already sorted, breaking early')
-      break
-    }
-  }
-
-  return arr
+    // repeat until the entire array is sorted
 }
