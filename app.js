@@ -33,3 +33,17 @@ function mergeTwoArrays(arrayOne, arrayTwo) {
 
   return merged
 }
+
+// Challenge: make the merge sort algorithm!
+
+function mergeSort(arr) {
+  // base case - return array if length <= 1 (already sorted)
+
+  // find the middle index of the array
+  // split the array into two halves - left and right
+  // recursively call mergeSort on both halves
+    // --> this will sort each half individually
+
+  // merge & return the sorted halves back together
+  // use the mergeTwoArrays helper function to do this
+}
