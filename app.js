@@ -34,16 +34,29 @@ function mergeTwoArrays(arrayOne, arrayTwo) {
   return merged
 }
 
-// Challenge: make the merge sort algorithm!
-
 function mergeSort(arr) {
-  // base case - return array if length <= 1 (already sorted)
+  if (arr.length <= 1) {
+    return arr
+  }
 
-  // find the middle index of the array
-  // split the array into two halves - left and right
-  // recursively call mergeSort on both halves
-    // --> this will sort each half individually
+  let middle = Math.floor(arr.length/2)
 
-  // merge & return the sorted halves back together
-  // use the mergeTwoArrays helper function to do this
+  let left =  mergeSort(arr.slice(0, middle))
+  let right = mergeSort(arr.slice(middle))
+
+  return mergeTwoArrays(left, right)
 }
+
+// input: [9,2,5,4]
+// --> left = mergeSort([9,2]) & right = mergeSort([5,4])
+// --> return mergeTwoArrays([2,9], [4,5]) = [2,4,5,9]
+
+// input: [9,2]            
+// --> left = mergeSort([9]) & right = mergeSort([2])
+// --> left = [9] & right = [2]
+// --> return mergeTwoArrays([9], [2]) = [2,9]
+
+// input: [5,4]
+// --> left = mergeSort([5]) & right = mergeSort([4])
+// --> left = [5] & right = [4]
+// --> return mergeTwoArrays([5], [4]) = [4,5]   
