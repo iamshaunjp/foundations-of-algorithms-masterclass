@@ -1,33 +1,26 @@
-function areAnagrams(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false
-  }
+function findPairWithSum(arr, target) {
+  let left = 0
+  let right = arr.length - 1
 
-  // frequence object
-  const frequency = {}
+  // loop until the pointers meet
+  while (left < right) {
+    const sum = arr[left] + arr[right];
 
-  for (const char of str1) {
-    frequency[char] = (frequency[char] || 0) + 1;
-  }
-
-  for (const char of str2) {
-    if (!frequency[char]) {
-      return false
+    if (sum === target) {
+      return [arr[left], arr[right]]
+    } 
+    
+    if (sum < target) {
+      left++
     }
-    frequency[char]--
+    
+    if (sum > target){
+      right--
+    }
   }
 
-  return true
+  return null
 }
 
-/* str1: asleep, str2: please
-
-{
-  a: 1,
-  s: 1,
-  l: 1,
-  e: 2,
-  p: 1
-}
-
-*/
+// arr = [1,2,4,6,8,8,9], target = 12
+// pair = [4,8]
