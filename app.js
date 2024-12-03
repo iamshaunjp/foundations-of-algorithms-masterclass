@@ -1,22 +1,13 @@
-function maxSubarraySum(arr, k) {
-  if (arr.length < k) return null
+// CHALLENGES
 
-  let maxSum = 0
-  let windowSum = 0
+// don't be afraid of getting things wrong
+//   --> you learn by making mistakes
 
-  // sum the first window of size k
-  for (let i = 0; i < k; i++) {
-    windowSum += arr[i]
-  }
+// think about efficiency and time complexity
+//   --> test for different inputs (large & small)
 
-  maxSum = windowSum
+// use the techniques we've learnt in this course
+//   --> recursion, sliding windows, freq counting, pointers etc
 
-  // slide window over the array
-  for (let i = k; i < arr.length; i++) {
-    windowSum += arr[i] - arr[i - k]
-
-    maxSum = Math.max(maxSum, windowSum)
-  }
-
-  return maxSum
-}
+// give every challenge a good go
+//   --> this is where the real learning starts
