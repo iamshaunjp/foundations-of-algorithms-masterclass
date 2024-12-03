@@ -1,26 +1,22 @@
-function findPairWithSum(arr, target) {
-  let left = 0
-  let right = arr.length - 1
+function maxSubarraySum(arr, k) {
+  if (arr.length < k) return null
 
-  // loop until the pointers meet
-  while (left < right) {
-    const sum = arr[left] + arr[right];
+  let maxSum = 0
+  let windowSum = 0
 
-    if (sum === target) {
-      return [arr[left], arr[right]]
-    } 
-    
-    if (sum < target) {
-      left++
-    }
-    
-    if (sum > target){
-      right--
-    }
+  // sum the first window of size k
+  for (let i = 0; i < k; i++) {
+    windowSum += arr[i]
   }
 
-  return null
-}
+  maxSum = windowSum
 
-// arr = [1,2,4,6,8,8,9], target = 12
-// pair = [4,8]
+  // slide window over the array
+  for (let i = k; i < arr.length; i++) {
+    windowSum += arr[i] - arr[i - k]
+
+    maxSum = Math.max(maxSum, windowSum)
+  }
+
+  return maxSum
+}
