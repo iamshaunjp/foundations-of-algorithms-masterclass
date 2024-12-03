@@ -1,13 +1,18 @@
-// CHALLENGES
+/*
+  CHALLENGE 1 - Greatest Common Divisor
+  ------------------------------------- 
+  Given two positive integers, a and b, write a function that 
+  returns their Greatest Common Divisor (GCD). The GCD is defined 
+  as the largest positive integer that divides both a and b 
+  without leaving a remainder
 
-// don't be afraid of getting things wrong
-//   --> you learn by making mistakes
+  Example - GCD of 12 & 18 is 3
+*/
 
-// think about efficiency and time complexity
-//   --> test for different inputs (large & small)
+function findGCD(a, b) {
 
-// use the techniques we've learnt in this course
-//   --> recursion, sliding windows, freq counting, pointers etc
+  // HINTS:
+  // what happens if one number (a or b) is 0?
+  // try using recursion
 
-// give every challenge a good go
-//   --> this is where the real learning starts
+}
