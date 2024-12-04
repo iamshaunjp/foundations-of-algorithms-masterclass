@@ -11,8 +11,29 @@
 
 function findGCD(a, b) {
 
-  // HINTS:
-  // what happens if one number (a or b) is 0?
-  // try using recursion
+  // use recursion to simplify the problem
+
+  // a % b = r
+  // example: 14 % 4 = 2, where q = 3
+
+  // a = b * q + r
+  // example: 14 = (4 * 3) + 2
+
+  // rearranging for r: r = a - (b * q)
+  // example: 2 = 14 - (4 * 3)
+
+  // any number that divides both a and b must also divide r
+  // example: (r/gcd) = (a/gcd) - (b/gcd * q)
+
+  // since (a/gcd), (b/gcd) and q are all integers (whole numbers),
+  // (r/gcd) must also be an integer (whole number)
+
+  // therefore any number that divides both "a" and "b" must also divide "r".
+
+  // so we can replace "a" with "r" to make the problem smaller:
+  // this means findGCD(a, b) is the same as findGCD(b, a % b)
+
+  // base case: if one number is 0, the GCD is the other number
+  // example: findGCD(a, 0) = a
 
 }
