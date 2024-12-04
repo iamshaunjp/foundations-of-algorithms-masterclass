@@ -8,8 +8,20 @@
 
 function isPalindrome(str) {
   
-  // try using 2 pointers
-  // compare chars at the start and end of str
-  // work towards the center where the pointers meet
+  // pointers
+  let left = 0
+  let right = str.length - 1
 
+  while (left < right) { 
+    
+    if (str[left] !== str[right]) {
+      return false
+    }
+
+    // move pointers inwards
+    left++
+    right--
+  }
+
+  return true
 }
