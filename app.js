@@ -9,10 +9,26 @@
   Example - GCD of 12 & 18 is 3
 */
 
+// recursive solution
 function findGCD(a, b) {
+  // base case - if b is 0, the GCD is "a"
+  if (b === 0) {
+    return a
+  }
 
-  // HINTS:
-  // what happens if one number (a or b) is 0?
-  // try using recursion
+  return findGCD(b, a % b)
+}
 
+// iterative solution
+function findGCDIterative(a, b) {
+  let gcd = 1
+  let smallest = Math.min(a, b)
+
+  for (let i = 1; i <= smallest; i++) {
+    if (a % i === 0 && b % i === 0) {
+      gcd = i
+    }
+  }
+
+  return gcd
 }
