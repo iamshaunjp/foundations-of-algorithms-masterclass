@@ -1,24 +1,15 @@
 /*
-  CHALLENGE 2 - Cartesian Product
+  CHALLENGE 3 - Check if a Word is a Palindrome
   ------------------------------------- 
-  Given two arrays, arr1 and arr2, generate all possible pairs (x, y) where x is an element of arr1 and y is an element of arr2. Each pair should be represented as an array [x, y], and the output should be an array of these pairs.
+  Write a function that checks if a given string is a palindrome. A palindrome is a word that reads the same backwards as forwards.
 
-  Example: arr1 = ['a', 'b'] & arr2 = [1, 2, 3]
-  Solution: 
-    [
-      ['a', 1], ['a', 2], ['a', 3],
-      ['b', 1], ['b', 2], ['b', 3]
-    ]
+  Example: "racecar" --> true, "hello" --> false
 */
 
-function cartesianProduct(arr1, arr2) {
-  const result = []
+function isPalindrome(str) {
   
-  for (let x of arr1) {
-    for (let y of arr2) {
-      result.push([x, y])
-    }
-  }
-  
-  return result
+  // try using 2 pointers
+  // compare chars at the start and end of str
+  // work towards the center where the pointers meet
+
 }
