@@ -1,34 +1,17 @@
 /*
-  CHALLENGE 1 - Greatest Common Divisor
+  CHALLENGE 2 - Cartesian Product
   ------------------------------------- 
-  Given two positive integers, a and b, write a function that 
-  returns their Greatest Common Divisor (GCD). The GCD is defined 
-  as the largest positive integer that divides both a and b 
-  without leaving a remainder
+  Given two arrays, arr1 and arr2, generate all possible pairs (x, y) where x is an element of arr1 and y is an element of arr2. Each pair should be represented as an array [x, y], and the output should be an array of these pairs.
 
-  Example - GCD of 12 & 18 is 3
+  Example: arr1 = ['a', 'b'] & arr2 = [1, 2, 3]
+  Solution: 
+    [
+      ['a', 1], ['a', 2], ['a', 3],
+      ['b', 1], ['b', 2], ['b', 3]
+    ]
 */
 
-// recursive solution
-function findGCD(a, b) {
-  // base case - if b is 0, the GCD is "a"
-  if (b === 0) {
-    return a
-  }
 
-  return findGCD(b, a % b)
-}
-
-// iterative solution
-function findGCDIterative(a, b) {
-  let gcd = 1
-  let smallest = Math.min(a, b)
-
-  for (let i = 1; i <= smallest; i++) {
-    if (a % i === 0 && b % i === 0) {
-      gcd = i
-    }
-  }
-
-  return gcd
+function cartesianProduct(arr1, arr2) {
+  
 }
