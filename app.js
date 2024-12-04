@@ -11,7 +11,14 @@
     ]
 */
 
-
 function cartesianProduct(arr1, arr2) {
+  const result = []
   
+  for (let x of arr1) {
+    for (let y of arr2) {
+      result.push([x, y])
+    }
+  }
+  
+  return result
 }
