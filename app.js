@@ -1,27 +1,17 @@
 /*
-  CHALLENGE 3 - Check if a Word is a Palindrome
+  CHALLENGE 4 - Longest Substring Without Repeating Characters
   ------------------------------------- 
-  Write a function that checks if a given string is a palindrome. A palindrome is a word that reads the same backwards as forwards.
+  Given a string, str, write a function to find the length of the longest substring that contains only unique characters (no repeating characters)
 
-  Example: "racecar" --> true, "hello" --> false
+  Example: "pbbabcbcbb" --> 3 (abc)
 */
 
-function isPalindrome(str) {
+function lengthOfLongestSubstring(str) {
+  // use a sliding window to track the current substring
   
-  // pointers
-  let left = 0
-  let right = str.length - 1
+  // keep track of the last seen index of each character
 
-  while (left < right) { 
-    
-    if (str[left] !== str[right]) {
-      return false
-    }
-
-    // move pointers inwards
-    left++
-    right--
-  }
-
-  return true
+  // keep track of the starting position of the window
+  
+  // update the max length as you move the window along
 }
