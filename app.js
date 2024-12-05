@@ -7,11 +7,20 @@
 */
 
 function lengthOfLongestSubstring(str) {
-  // use a sliding window to track the current substring
-  
-  // keep track of the last seen index of each character
+  let maxLength = 0
+  let start = 0
+  let charIndex = {}
 
-  // keep track of the starting position of the window
-  
-  // update the max length as you move the window along
+  for (let end = 0; end < str.length; end++) {
+    const char = str[end]
+
+    if (char in charIndex && charIndex[char] >= start) {
+      start = charIndex[char] + 1
+    }
+
+    charIndex[char] = end
+    maxLength = Math.max(maxLength, end - start + 1)
+  }
+
+  return maxLength
 }
