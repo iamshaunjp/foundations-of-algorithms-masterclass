@@ -17,22 +17,23 @@
    Output: 0
    Explanation: No coins are needed to form 0
 
+  Using the largest coin first is not always the best way:
+  Example: coins = [1p, 20p, 50p], amount = 60p
+
 */
 
 function coinChange(coins, amount) {
 
-  // create array to store the min number of coins for each amount
-  // --> the amount would be the index
-  // --> e.g. minCoins[7] value would be the min coins for the amount 7p
-  // --> init index 0 in the array to be 0 (0 coins need to make 0p)
-  // --> init all other array values to Infinity to begin with
+  const minCoins = new Array(amount + 1).fill(Infinity)
+  minCoins[0] = 0
 
-  // loop through each coin
-  // --> for each coin, update the array for every amount
-  // --> for each coin, initialize i to be the coin value
-  // --> update the minCoins array positions when you find lower values
+  for (let coin of coins) {
 
-  // if the target amount remains unreachable (Infinity), return -1
-  // otherwise, return the value at the target amount in the array
-  
+    for (let i = coin; i <= amount; i++) {
+      minCoins[i] = Math.min(minCoins[i], minCoins[i - coin] + 1)
+    }
+
+  }
+
+  return minCoins[amount] === Infinity ? -1 : minCoins[amount]
 }
